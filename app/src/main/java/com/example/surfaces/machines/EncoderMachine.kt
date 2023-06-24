@@ -167,7 +167,7 @@ class EncoderMachine : StateMachine<EncoderState, EncoderAction> {
             Toast.makeText(
                 ContextHelper.appContext,
                 "Stop record: $filePath",
-                Int.MIN_VALUE
+                Toast.LENGTH_SHORT
             ).show()
         }
     }

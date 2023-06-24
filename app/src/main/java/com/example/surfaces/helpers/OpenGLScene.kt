@@ -1,6 +1,7 @@
 package com.example.surfaces.helpers
 
 import android.opengl.EGL14
+import android.opengl.EGLContext
 import android.opengl.GLES20
 import android.view.Surface
 import com.example.surfaces.utils.ErrorUtils.checkGlError
@@ -42,7 +43,7 @@ class OpenGLScene(
         }
     """.trimIndent()
 
-    val openglContext = EGL14.eglGetCurrentContext()
+    val openglContext: EGLContext = EGL14.eglGetCurrentContext()
 
     val fullscreenTexture = OpenGLExternalTexture(
         textureWidth = sceneWidth,
